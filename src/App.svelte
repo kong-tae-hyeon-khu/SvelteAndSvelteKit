@@ -1,30 +1,54 @@
+
+
 <script>
-	export let name;
+	// import Editor from 'cl-editor';
+	// let id;
+	// let password;
+	
+	// let html = '<h3>hello</h3>'
+
+	// const submitHandler = (e) => {
+	// 	e.preventDefault();
+	// 	console.log(id, password);
+	// }
+	let message;
+
+
+	/**
+	 * Send Message
+	 * Add Attribute (User Name)
+	*/
+	const doSend = async (e)=> {
+		e.preventDefault()
+		const res = await fetch('http://localhost:8080/message', {
+			method : 'POST',
+			body : JSON.stringify({
+				message
+			})
+		})
+
+		const json = await res.json();
+		console.log(JSON.stringify(json));
+		message = "";
+	}
+
+
+
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
+<div id="chat-box">
+	
+</div>
+<form id='chat-form'>
+	<input bind:value={message}/>
+	<button on:click={doSend}>Send</button>
+</form>
 
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
-</style>
+<!-- <form on:submit={submitHandler}>
+	<input bind:value={id}/>
+	<input bind:value={password}/>
+	<button on:submit={submitHandler}>Test</button>
+</form>
+{@html html}
+{html}
+<Editor on:change={(e) => html = e.detail} /> -->
