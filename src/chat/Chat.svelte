@@ -1,5 +1,3 @@
-
-
 <script>
 	// import Editor from 'cl-editor';
 	// let id;
@@ -44,20 +42,3 @@
 	}
 
 </script>
-
-<div class="chat-container">
-	
-</div>
-<form id='chat-form'>
-	<input bind:value={message}/>
-	<button on:click={doSend}>Send</button>
-</form>
-
-<!-- <form on:submit={submitHandler}>
-	<input bind:value={id}/>
-	<input bind:value={password}/>
-	<button on:submit={submitHandler}>Test</button>
-</form>
-{@html html}
-{html}
-<Editor on:change={(e) => html = e.detail} /> -->
