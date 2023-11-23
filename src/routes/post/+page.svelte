@@ -1,6 +1,10 @@
+<script>
+    export let data;
+</script>
+
 <h1>Post</h1>
 <ul>
-    <li><a href="/post/one">one</a></li>
-    <li><a href="/post/two">two</a></li>
-    <li><a href="/post/three">three</a></li>
+    {#each data.summaries as {slug, title}}
+        <li><a href="/post/{slug}">{title}</a></li>
+    {/each}
 </ul>
