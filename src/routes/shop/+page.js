@@ -1,4 +1,4 @@
-export const load = async ( {fetch}) => {
+export const load = ( {fetch}) => {
 
     // Dummy Data : https://dummyjson.com/docs/products
 
