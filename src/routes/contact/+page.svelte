@@ -2,6 +2,7 @@
 
 <script>
     import ContactList from '$lib/components/contactList.svelte';
+    import {enhance} from '$app/forms';
     export let data;
     export let form;
     console.log(form);
@@ -12,7 +13,7 @@
     @import '../app.css';
 </style>
 
-<form method="post" action="?/create">
+<form method="post" action="?/create" use:enhance>
     <div>
         <label for="name" class="label">
             <span class="label-text">name</span>
