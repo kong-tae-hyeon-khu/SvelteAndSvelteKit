@@ -1,0 +1,43 @@
+/* app.css */
+
+
+h1 {
+  text-align: center;
+}
+
+/* 전체 폼 스타일 */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  /* 각 라벨 스타일 */
+  .label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  /* 각 입력 필드 스타일 */
+  .input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+  }
+  
+  /* 추가적인 스타일을 원하는 대로 변경할 수 있습니다. */
+  button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
