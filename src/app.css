@@ -1,5 +1,10 @@
 /* app.css */
 
+
+h1 {
+  text-align: center;
+}
+
 /* 전체 폼 스타일 */
 form {
     max-width: 400px;
