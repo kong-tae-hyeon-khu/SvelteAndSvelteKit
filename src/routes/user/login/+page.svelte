@@ -1,9 +1,13 @@
 <script>
     import {user} from "../../../lib/store/user/register"
+    import {_login} from "./+page"
 
     const onClickHandler = () => {
-        
+        _login(user)
     }
+
+    
+
 </script>
 
 <style>

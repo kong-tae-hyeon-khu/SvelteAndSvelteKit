@@ -1,10 +1,10 @@
 import { goto } from "$app/navigation";
-import { redirect } from "@sveltejs/kit";
+import { setInit } from "../../../lib/store/user/register";
 
 export const _user =  {
     regist : async (user) => {
         console.log(user);
-        const res = await fetch("http://localhost:8080/api/user/signup", {
+        const res = await fetch("https://www.konglog.shop/api/user/signup", {
             method : 'POST',
             headers : {
                 'Content-type' : 'application/json'
@@ -20,6 +20,7 @@ export const _user =  {
         if (res.ok) {
             const response = await res.json();
             console.log(response)
+            setInit();
             goto("/");
         }
     }

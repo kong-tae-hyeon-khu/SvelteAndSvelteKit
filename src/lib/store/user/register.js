@@ -5,3 +5,11 @@ export const user = writable({
     email : "",
     password : "",
 });
+
+export const setInit = () => {
+    user.set({
+        name : "",
+        email : "",
+        password : "",
+    })
+}

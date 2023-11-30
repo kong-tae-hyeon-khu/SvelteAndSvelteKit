@@ -1,7 +1,7 @@
 <script>
-    import {isLogged} from "../lib/store/user/login"
+    import {isLogged ,logout} from "../lib/store/user/login"
     const onClickHandler = () => {
-
+        logout();
     }
 </script>
     
@@ -33,6 +33,28 @@
     .login-btn {
         margin-left: 1rem; /* 버튼 간격 조절 */
     }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        padding: 1rem;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    footer a {
+        color: black;
+        text-decoration: none;
+        margin: 0 1rem;
+        font-size: 18px;
+    }
+
+    footer a:hover {
+        border-bottom: 2px solid blue;
+    }
 </style>
 
 <nav>
@@ -42,15 +64,22 @@
         <a href="/post/write">Write</a>
     </div>
 
-    {#if !$isLogged} 
+    {#if ($isLogged === "0")} 
         <div class="login-container">
             <a href="/user/register" class="login-btn">Register</a>    
             <a href="/user/login" class="login-btn">Login</a> 
         </div>
 
     {:else}
-        <a href="/user/logout" on:click={onClickHandler} class="login-btn">Logout</a>    
+        <a href="/" on:click={onClickHandler} class="login-btn">Logout</a>    
     {/if}
+
 </nav>
+<footer>
+    <div>
+        <a href="https://github.com/kong-tae-hyeon-khu" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="/">Mail : kong3047@khu.ac.kr</a>
+    </div>
+</footer>
 
 <slot/>

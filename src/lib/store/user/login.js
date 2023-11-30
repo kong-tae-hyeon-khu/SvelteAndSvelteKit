@@ -1,11 +1,24 @@
 import { writable } from "svelte/store";
+import { browser } from "$app/environment";
 
-export const isLogged = writable(false);
+const defaultValue = "0";
 
-export const login = () => {
-    isLogged.set(true);
+const isLoggedSession = browser ? window.localStorage.getItem("isLogged") ?? defaultValue : defaultValue;
+
+export const isLogged = writable(isLoggedSession);
+
+export const login = async (userId) => {
+    isLogged.set(userId.toString());
+    
 }
 
 export const logout = () => {
-    isLogged.set(false);
+    isLogged.set("0");
 }
+
+
+isLogged.subscribe(value => {
+    if (browser) {
+        window.localStorage.setItem("isLogged", value);
+    }
+})
