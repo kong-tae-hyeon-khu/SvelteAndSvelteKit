@@ -9,7 +9,6 @@
 		"lint": "prettier --check .",
 		"format": "prettier --write ."
 	},
-	
 	"devDependencies": {
 		"@sveltejs/kit": "^1.27.4",
 		"prettier": "^3.0.0",
