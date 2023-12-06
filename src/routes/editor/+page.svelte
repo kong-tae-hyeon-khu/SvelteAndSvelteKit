@@ -1,17 +1,16 @@
 <script>
-    import Editor from "cl-editor";
+    import Editor from "cl-editor/src/Editor.svelte"
+  
 
-    let html = '<h3>내용을 입력해주세요</h3>'
-
-
-    const onChangeHandler = (evt) => {
-        console.log(evt.detail)
-        console.log(editor)
+    let editorRef;
+    const onChangeHandler = (event) => {
+        console.log(editorRef.getHtml());
+        
         
     }
-</script>
 
-<main>
-    {@html html}
-    <Editor {html} on:change={onChangeHandler}/>
-</main>
+    const actions = ['b', 'i', 'u', 'strike','ul','ol']
+    
+  </script>
+  
+  <Editor actions={actions} bind:this={editorRef} on:change={onChangeHandler}/>
