@@ -1,13 +1,5 @@
 <style>
     @import "./+page.css";
-    h2 {
-        text-align: center;
-    }
-    
-    label {
-    font-weight: bold; /* 글씨를 두껍게 */
-    margin-bottom: 5px; /* 레이블 간 간격 조절 */
-  }
     
 </style>
 
