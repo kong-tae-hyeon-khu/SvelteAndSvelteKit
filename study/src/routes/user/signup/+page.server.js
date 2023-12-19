@@ -1,3 +1,5 @@
-import {mysqlConnFn} from "$lib/db/mysql"
-
-console.log(mysqlConnFn);
+export const actions = {
+    default : async (event) => {
+        console.log(event);
+    }
+}

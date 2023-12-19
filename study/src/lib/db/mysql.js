@@ -11,7 +11,7 @@ export const mysqlConnFn= () => {
             host : '127.0.0.1',
             user : 'root',
             password : MY_SQL_SECREAT,
-            database : 'database-name'
+            database : 'kong_db'
         })
     }
  
