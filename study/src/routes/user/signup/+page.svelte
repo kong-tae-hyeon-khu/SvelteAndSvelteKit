@@ -1,23 +1,42 @@
+<script>
+    import {enhance} from '$app/forms'
+</script>
+
 <style>
-    @import "./+page.css";
+    
+    @import "../../../app.css";
     
 </style>
 
-<div>
-    <h2>Sign Up</h2>
-    <form>
-        <label for="userName">Name</label>
-        <input type="text" id="userName" name="userName" required>
 
-        <label for="userNickName">Nick Name</label>
-        <input type="text" id="userNickName" name="userNickName" required>
 
-        <label for="userEmail">Email</label>
-        <input type="email" id="userEmail" name="userEmail" required>
-        
-        <label for="userPassword">Password</label>
-        <input type="password" id="userPassword" name="userPassword" required>
+<div class="flex justify-center h-screen">
+    <div class="w-full max-w-xs">
+        <form method="POST" class="rounded px-10 pt-6">
 
-        <button>Sign Up</button>
-    </form>
+            <h2 class="text-2xl mb-4">회원가입</h2>
+            <hr class="my-4">
+            <div class="space-y-2 mb-4">
+                <label class="font-medium" for="userName">Name</label>
+                <input name="name" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+            </div>
+
+            <div class="space-y-2 mb-4">
+                <label class="font-medium" for="userNickName">Nick Name</label>
+                <input name="nickName" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+            </div>
+
+            <div class="space-y-2 mb-4">
+                <label class="font-medium" for="userEmail">Email</label>
+                <input name="email" type="email" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+            </div>
+
+            <div class="space-y-2 mb-4">
+                <label class="font-medium" for="userPassword">Password</label>
+                <input name="password" type="password" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+            </div>
+
+            <button class="btn btn-secondary w-full space-y-2">Sign Up</button>
+        </form>
+    </div>
 </div>
