@@ -12,7 +12,7 @@
 
 <div class="flex justify-center h-screen">
     <div class="w-full max-w-xs">
-        <form method="POST" class="rounded px-10 pt-6">
+        <form method="POST" class="rounded px-10 pt-6" >
 
             <h2 class="text-2xl mb-4">회원가입</h2>
             <hr class="my-4">
